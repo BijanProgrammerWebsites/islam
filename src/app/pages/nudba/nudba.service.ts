@@ -22,8 +22,8 @@ export class NudbaService {
             const faraaz: Faraaz = {arabicTokens: [], persianTokens: []};
 
             items.forEach((item) => {
-                faraaz.arabicTokens.push(item.arabic);
-                faraaz.persianTokens.push(item.persian);
+                faraaz.arabicTokens.push({text: item.arabic, isFromQuran: !!item.isFromQuran});
+                faraaz.persianTokens.push({text: item.persian, isFromQuran: !!item.isFromQuran});
             });
 
             this.dua.push(faraaz);

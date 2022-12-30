@@ -6,11 +6,12 @@
             <div
                 *ngFor="let arabicToken of faraaz.arabicTokens; let tokenIndex = index"
                 class="token"
+                [class.quran]="arabicToken.isFromQuran"
                 [class.highlighted]="faraazIndex === highlightedFaraazIndex && tokenIndex === highlightedTokenIndex"
                 (mouseenter)="tokenMouseEnterHandler(faraazIndex, tokenIndex)"
                 (mouseleave)="tokenMouseLeaveHandler()"
             >
-                {{ arabicToken }}
+                {{ arabicToken.text }}
             </div>
         </div>
 
@@ -22,7 +23,7 @@
                 (mouseenter)="tokenMouseEnterHandler(faraazIndex, tokenIndex)"
                 (mouseleave)="tokenMouseLeaveHandler()"
             >
-                {{ persianToken }}
+                {{ persianToken.text }}
             </div>
         </div>
     </div>

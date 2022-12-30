@@ -22,6 +22,20 @@
         .arabic {
             font-family: "Amiri Quran", serif;
             font-size: 1.5em;
+
+            .token {
+                &.quran {
+                    color: var(--color--quran);
+
+                    &::before {
+                        content: "﴿";
+                    }
+
+                    &::after {
+                        content: "﴾";
+                    }
+                }
+            }
         }
 
         .persian {

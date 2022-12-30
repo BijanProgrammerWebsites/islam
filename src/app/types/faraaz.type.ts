@@ -1,1 +1,3 @@
-export type Faraaz = {arabicTokens: string[]; persianTokens: string[]};
+import {Token} from './token.type';
+
+export type Faraaz = {arabicTokens: Token[]; persianTokens: Token[]};
