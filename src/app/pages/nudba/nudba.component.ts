@@ -7,15 +7,18 @@ import {NudbaService} from './nudba.service';
     styleUrls: ['./nudba.component.scss'],
 })
 export class NudbaComponent {
-    public highlightedIndex: number | null = null;
+    public highlightedFaraazIndex: number | null = null;
+    public highlightedTokenIndex: number | null = null;
 
     public constructor(public nudbaService: NudbaService) {}
 
-    public tokenMouseEnterHandler(index: number): void {
-        this.highlightedIndex = index;
+    public tokenMouseEnterHandler(faraazIndex: number, tokenIndex: number): void {
+        this.highlightedFaraazIndex = faraazIndex;
+        this.highlightedTokenIndex = tokenIndex;
     }
 
     public tokenMouseLeaveHandler(): void {
-        this.highlightedIndex = null;
+        this.highlightedFaraazIndex = null;
+        this.highlightedTokenIndex = null;
     }
 }

@@ -1,13 +1,13 @@
 <h1>دعای ندبه</h1>
 
 <div class="dua">
-    <div class="faraaz" *ngFor="let faraaz of nudbaService.dua">
+    <div class="faraaz" *ngFor="let faraaz of nudbaService.dua; let faraazIndex = index">
         <div class="arabic">
             <div
-                *ngFor="let arabicToken of faraaz.arabicTokens; let index = index"
+                *ngFor="let arabicToken of faraaz.arabicTokens; let tokenIndex = index"
                 class="token"
-                [class.highlighted]="index === highlightedIndex"
-                (mouseenter)="tokenMouseEnterHandler(index)"
+                [class.highlighted]="faraazIndex === highlightedFaraazIndex && tokenIndex === highlightedTokenIndex"
+                (mouseenter)="tokenMouseEnterHandler(faraazIndex, tokenIndex)"
                 (mouseleave)="tokenMouseLeaveHandler()"
             >
                 {{ arabicToken }}
@@ -16,10 +16,10 @@
 
         <div class="persian">
             <div
-                *ngFor="let persianToken of faraaz.persianTokens; let index = index"
+                *ngFor="let persianToken of faraaz.persianTokens; let tokenIndex = index"
                 class="token"
-                [class.highlighted]="index === highlightedIndex"
-                (mouseenter)="tokenMouseEnterHandler(index)"
+                [class.highlighted]="faraazIndex === highlightedFaraazIndex && tokenIndex === highlightedTokenIndex"
+                (mouseenter)="tokenMouseEnterHandler(faraazIndex, tokenIndex)"
                 (mouseleave)="tokenMouseLeaveHandler()"
             >
                 {{ persianToken }}

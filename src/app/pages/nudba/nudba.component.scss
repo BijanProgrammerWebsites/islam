@@ -1,9 +1,9 @@
 .dua {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 8rem;
 
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     .faraaz {
         display: flex;
@@ -28,7 +28,13 @@
             line-height: 1.8;
         }
 
-        &:has(.highlighted) {
+        &:last-of-type {
+            min-height: 100vh;
+        }
+    }
+
+    &:has(.highlighted) {
+        .faraaz {
             .arabic,
             .persian {
                 .token {
