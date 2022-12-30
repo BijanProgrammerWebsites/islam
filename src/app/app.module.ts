@@ -7,12 +7,13 @@ import {AppComponent} from './app.component';
 import {HeaderModule} from './components/header/header.module';
 
 import {HomeModule} from './pages/home/home.module';
+import {NudbaModule} from './pages/nudba/nudba.module';
 
 import {PipesModule} from './pipes/pipes.module';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, AppRoutingModule, HeaderModule, HomeModule, PipesModule],
+    imports: [BrowserModule, AppRoutingModule, HeaderModule, HomeModule, NudbaModule, PipesModule],
     providers: [],
     bootstrap: [AppComponent],
 })
