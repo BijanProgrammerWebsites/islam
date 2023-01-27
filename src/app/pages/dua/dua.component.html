@@ -1,7 +1,7 @@
-<h1>دعای ندبه</h1>
+<h1>{{ activatedRoute.title | async }}</h1>
 
 <div class="dua">
-    <div class="faraaz" *ngFor="let faraaz of nudbaService.dua; let faraazIndex = index">
+    <div class="faraaz" *ngFor="let faraaz of duaService.dua; let faraazIndex = index">
         <div class="arabic">
             <div
                 *ngFor="let arabicToken of faraaz.arabicTokens; let tokenIndex = index"

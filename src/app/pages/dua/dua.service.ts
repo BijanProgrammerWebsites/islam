@@ -6,15 +6,11 @@ import {Faraaz} from '../../types/faraaz.type';
 @Injectable({
     providedIn: 'root',
 })
-export class NudbaService {
+export class DuaService {
     public dua: Dua = [];
 
-    public constructor() {
-        this.loadDua().then();
-    }
-
-    private async loadDua(): Promise<void> {
-        const response = await fetch('assets/dua/nudba.json');
+    public async loadDua(jsonFilename: string): Promise<void> {
+        const response = await fetch(`assets/dua/${jsonFilename}`);
         const rawDua: RawDua = await response.json();
 
         this.dua = [];

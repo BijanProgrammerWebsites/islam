@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NudbaComponent} from './nudba.component';
+import {DuaComponent} from './dua.component';
 
 @NgModule({
-    declarations: [NudbaComponent],
+    declarations: [DuaComponent],
     imports: [CommonModule],
 })
-export class NudbaModule {}
+export class DuaModule {}
