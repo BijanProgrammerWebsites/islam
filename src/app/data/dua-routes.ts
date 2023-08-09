@@ -5,6 +5,7 @@ import {DuaComponent} from '../pages/dua/dua.component';
 
 const pathToTitleMap: Map<string, string> = new Map([
     ['mafatih39', 'زیارت امام زمان (عج) در روز جمعه'],
+    ['mafatih52', 'دعای توسل'],
     ['mafatih273', 'زیارت عاشورا'],
     ['mafatih312', 'دعای ندبه'],
     ['mafatih314', 'دعای عهد'],
