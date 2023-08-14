@@ -1,27 +1,24 @@
-name: Deployment Workflow
+name: Deploy
 on:
     push:
         branches: [master]
 
 jobs:
-    deploy_job:
+    deploy:
         name: Deploy
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
+
         steps:
-            - name: Establish a Connection to Server and Update Website
-              uses: appleboy/ssh-action@master
-              with:
-                  host: 130.185.76.173
-                  username: root
-                  key: ${{secrets.SSH_KEY}}
-                  port: 22
-                  script: |
-                      cd /repos/islam
-                      git fetch
-                      git checkout master
-                      git reset --hard HEAD
-                      git pull origin master
-                      npm i
-                      ng build --base-href=/
-                      rm -rf /var/islam/bijanprogrammer.com/html/
-                      cp -a dist/islam/. /var/islam/bijanprogrammer.com/html/
+            - uses: actions/checkout@v3
+
+            - name: Install Dependencies
+              run: npm i
+
+            - name: Build
+              run: npm run build --base-href=/
+
+            - name: Move Built Files to Corresponding Folder
+              run: |
+                  rm -rf /var/www/islam.bijanprogrammer.com/html/
+                  mkdir -p /var/www/islam.bijanprogrammer.com/html/
+                  mv dist/islam/* /var/www/islam.bijanprogrammer.com/html/
