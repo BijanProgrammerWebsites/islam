@@ -15,7 +15,7 @@ jobs:
               run: npm i
 
             - name: Build
-              run: npm run build --base-href=/
+              run: npm run build -- --base-href=/
 
             - name: Move Built Files to Corresponding Folder
               run: |
