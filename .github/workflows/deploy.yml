@@ -5,20 +5,8 @@ on:
 
 jobs:
     deploy:
-        name: Deploy
-        runs-on: self-hosted
-
-        steps:
-            - uses: actions/checkout@v3
-
-            - name: Install Dependencies
-              run: npm i
-
-            - name: Build
-              run: npm run build -- --base-href=/
-
-            - name: Move Built Files to Corresponding Folder
-              run: |
-                  rm -rf /var/www/islam.bijanprogrammer.com/html/
-                  mkdir -p /var/www/islam.bijanprogrammer.com/html/
-                  mv dist/islam/* /var/www/islam.bijanprogrammer.com/html/
+        uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-angular.yml@master
+        with:
+            host: islam.bijanprogrammer.com
+            base-href: /
+            project-name: islam
