@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Dua} from '../../types/dua.type';
 import {RawDua} from '../../types/raw-dua.type';
 import {Faraaz} from '../../types/faraaz.type';
+import {Token} from '../../types/token.type';
 
 @Injectable({
     providedIn: 'root',
@@ -18,8 +19,14 @@ export class DuaService {
             const faraaz: Faraaz = {arabicTokens: [], persianTokens: []};
 
             items.forEach((item) => {
-                faraaz.arabicTokens.push({text: item.arabic, isFromQuran: !!item.isFromQuran});
-                faraaz.persianTokens.push({text: item.persian, isFromQuran: !!item.isFromQuran});
+                const common: Omit<Token, 'text'> = {
+                    isFromQuran: !!item.isFromQuran,
+                    start: item.timestamps?.[0],
+                    end: item.timestamps?.[1],
+                };
+
+                faraaz.arabicTokens.push({...common, text: item.arabic});
+                faraaz.persianTokens.push({...common, text: item.persian});
             });
 
             this.dua.push(faraaz);

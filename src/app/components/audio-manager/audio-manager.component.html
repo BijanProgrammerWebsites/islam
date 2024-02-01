@@ -1,0 +1,11 @@
+<audio
+    #audio
+    src="https://erfan.ir/files/sound/mafatih/952_790_2.erf?seed=10"
+    controls
+    muted
+    preload="metadata"
+    [playbackRate]="2"
+    (timeupdate)="timeUpdateHandler()"
+></audio>
+
+<button (click)="goForward()">Go Forward</button>

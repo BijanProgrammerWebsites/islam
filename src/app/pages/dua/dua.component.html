@@ -1,5 +1,7 @@
 <h1>{{ activatedRoute.title | async }}</h1>
 
+<app-audio-manager (currentTimeChange)="currentTime = $event"></app-audio-manager>
+
 <div #dua class="dua">
     <div class="faraaz" *ngFor="let faraaz of duaService.dua; let faraazIndex = index">
         <div class="arabic">
@@ -8,6 +10,7 @@
                 class="token"
                 [class.quran]="arabicToken.isFromQuran"
                 [class.highlighted]="faraazIndex === highlightedFaraazIndex && tokenIndex === highlightedTokenIndex"
+                [class.playing]="arabicToken | isPlaying : currentTime"
                 (mouseenter)="tokenMouseEnterHandler(faraazIndex, tokenIndex)"
                 (mouseleave)="tokenMouseLeaveHandler()"
             >

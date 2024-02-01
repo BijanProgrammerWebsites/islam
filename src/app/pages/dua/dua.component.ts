@@ -12,6 +12,8 @@ import {DuaRouteData} from '../../types/dua-route-data.type';
 export class DuaComponent implements OnInit, OnDestroy {
     @ViewChild('dua') public duaElementRef!: ElementRef<HTMLDivElement>;
 
+    public currentTime: number = 0;
+
     public highlightedFaraazIndex: number | null = null;
     public highlightedTokenIndex: number | null = null;
 

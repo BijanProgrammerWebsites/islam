@@ -15,7 +15,18 @@
             text-align: justify;
 
             .token {
+                --underline-size: 0.1em;
+
                 display: inline;
+
+                background-image: linear-gradient(90deg, currentcolor, currentcolor);
+                background-repeat: no-repeat;
+
+                animation: dua-playing-fade-out var(--animation--duration--fast) ease-in-out forwards;
+
+                &.playing {
+                    animation: dua-playing-fade-in var(--animation--duration--fast) ease-in-out forwards;
+                }
             }
         }
 
@@ -58,5 +69,29 @@
                 }
             }
         }
+    }
+}
+
+@keyframes dua-playing-fade-in {
+    from {
+        background-size: 0 var(--underline-size);
+        background-position: 100% bottom;
+    }
+
+    to {
+        background-size: 100% var(--underline-size);
+        background-position: 100% bottom;
+    }
+}
+
+@keyframes dua-playing-fade-out {
+    from {
+        background-size: 100% var(--underline-size);
+        background-position: 0 bottom;
+    }
+
+    to {
+        background-size: 0 var(--underline-size);
+        background-position: 0 bottom;
     }
 }
