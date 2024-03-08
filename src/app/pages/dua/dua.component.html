@@ -1,9 +1,9 @@
 <h1>{{ activatedRoute.title | async }}</h1>
 
-<app-audio-manager (currentTimeChange)="currentTime = $event"></app-audio-manager>
+<app-audio-manager [src]="duaService.dua?.audioSource" (currentTimeChange)="currentTime = $event"></app-audio-manager>
 
 <div #dua class="dua">
-    <div class="faraaz" *ngFor="let faraaz of duaService.dua; let faraazIndex = index">
+    <div class="faraaz" *ngFor="let faraaz of duaService.dua?.faraazes; let faraazIndex = index">
         <div class="arabic">
             <div
                 *ngFor="let arabicToken of faraaz.arabicTokens; let tokenIndex = index"

@@ -8,14 +8,14 @@ import {Token} from '../../types/token.type';
     providedIn: 'root',
 })
 export class DuaService {
-    public dua: Dua = [];
+    public dua: Dua | null = null;
 
     public async loadDua(jsonFilename: string): Promise<void> {
         const response = await fetch(`assets/dua/${jsonFilename}`);
         const rawDua: RawDua = await response.json();
 
-        this.dua = [];
-        rawDua.forEach((items) => {
+        this.dua = {audioSource: rawDua.audioSource, faraazes: []};
+        rawDua.faraazes.forEach((items) => {
             const faraaz: Faraaz = {arabicTokens: [], persianTokens: []};
 
             items.forEach((item) => {
@@ -29,7 +29,7 @@ export class DuaService {
                 faraaz.persianTokens.push({...common, text: item.persian});
             });
 
-            this.dua.push(faraaz);
+            this.dua?.faraazes.push(faraaz);
         });
     }
 }

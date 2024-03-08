@@ -1,1 +1,4 @@
-export type RawDua = {arabic: string; persian: string; timestamps?: [number, number]; isFromQuran?: boolean}[][];
+export type RawDua = {
+    audioSource: string;
+    faraazes: {arabic: string; persian: string; timestamps?: [number, number]; isFromQuran?: boolean}[][];
+};

@@ -1,3 +1,6 @@
 import {Faraaz} from './faraaz.type';
 
-export type Dua = Faraaz[];
+export type Dua = {
+    audioSource: string;
+    faraazes: Faraaz[];
+};

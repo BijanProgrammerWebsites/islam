@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 
 @Component({
     selector: 'app-audio-manager',
@@ -6,15 +6,13 @@ import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/c
     styleUrls: ['./audio-manager.component.scss'],
 })
 export class AudioManagerComponent {
-    @Output() public currentTimeChange = new EventEmitter<number>();
+    @Input() public src?: string;
+
+    @Output() private currentTimeChange = new EventEmitter<number>();
 
     @ViewChild('audio') private audioRef!: ElementRef<HTMLAudioElement>;
 
     public timeUpdateHandler(): void {
         this.currentTimeChange.emit(this.audioRef.nativeElement.currentTime);
-    }
-
-    public goForward(): void {
-        this.audioRef.nativeElement.currentTime = this.audioRef.nativeElement.currentTime + 10;
     }
 }
