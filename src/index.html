@@ -13,8 +13,21 @@
             href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Vazirmatn:wght@400;700&display=swap"
             rel="stylesheet"
         />
+
+        <style>
+            body.preload * {
+                transition: none !important;
+                animation-duration: 0s !important;
+            }
+        </style>
+
+        <script type="module">
+            window.addEventListener('load', () => {
+                document.body.classList.remove('preload');
+            });
+        </script>
     </head>
-    <body>
+    <body class="preload">
         <app-root></app-root>
     </body>
 </html>
