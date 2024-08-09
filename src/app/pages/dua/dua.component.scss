@@ -24,17 +24,6 @@
 
                 animation: dua-playing-fade-out var(--animation--duration--fast) ease-in-out forwards;
 
-                &.playing {
-                    animation: dua-playing-fade-in var(--animation--duration--fast) ease-in-out forwards;
-                }
-            }
-        }
-
-        .arabic {
-            font-family: "Amiri Quran", serif;
-            font-size: 1.5em;
-
-            .token {
                 &.quran {
                     color: var(--color--quran);
 
@@ -46,7 +35,16 @@
                         content: "﴾";
                     }
                 }
+
+                &.playing {
+                    animation: dua-playing-fade-in var(--animation--duration--fast) ease-in-out forwards;
+                }
             }
+        }
+
+        .arabic {
+            font-family: "Amiri Quran", serif;
+            font-size: 1.5em;
         }
 
         .persian {

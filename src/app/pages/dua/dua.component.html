@@ -22,7 +22,9 @@
             <div
                 *ngFor="let persianToken of faraaz.persianTokens; let tokenIndex = index"
                 class="token"
+                [class.quran]="persianToken.isFromQuran"
                 [class.highlighted]="faraazIndex === highlightedFaraazIndex && tokenIndex === highlightedTokenIndex"
+                [class.playing]="persianToken | isPlaying : currentTime"
                 (mouseenter)="tokenMouseEnterHandler(faraazIndex, tokenIndex)"
                 (mouseleave)="tokenMouseLeaveHandler()"
             >
