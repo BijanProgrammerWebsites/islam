@@ -1,5 +1,7 @@
 // VARIABLES
 :root {
+    color-scheme: light;
+
     --primary-hue: 220;
     --secondary-hue: 50;
     --success-hue: 120;
@@ -98,6 +100,8 @@
     --animation--duration--slow: 1s;
 
     &.theme--dark {
+        color-scheme: dark;
+
         --color--default-background: var(--color-gray-10);
         --color--default-foreground: var(--color-gray-90);
 
