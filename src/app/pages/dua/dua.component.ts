@@ -49,6 +49,11 @@ export class DuaComponent implements OnInit, OnDestroy {
         this.goToNextFaraaz();
     }
 
+    public currentTimeChangeHandler(currentTime: number): void {
+        this.currentTime = currentTime;
+        this.goToPlayingFaraaz();
+    }
+
     public tokenMouseEnterHandler(faraazIndex: number, tokenIndex: number): void {
         this.highlightedFaraazIndex = faraazIndex;
         this.highlightedTokenIndex = tokenIndex;
@@ -57,6 +62,17 @@ export class DuaComponent implements OnInit, OnDestroy {
     public tokenMouseLeaveHandler(): void {
         this.highlightedFaraazIndex = null;
         this.highlightedTokenIndex = null;
+    }
+
+    private goToPlayingFaraaz(): void {
+        const index = this.findPlayingFaraazIndex();
+        const faraaz = this.faraazes[index];
+
+        if (!faraaz) {
+            return;
+        }
+
+        window.scrollTo({top: faraaz.offsetTop});
     }
 
     private goToPreviousFaraaz(): void {
@@ -81,6 +97,22 @@ export class DuaComponent implements OnInit, OnDestroy {
         } else {
             window.scrollTo({top: document.body.scrollHeight});
         }
+    }
+
+    private findPlayingFaraazIndex(): number {
+        if (!this.duaService.dua) {
+            return -1;
+        }
+
+        return this.duaService.dua.faraazes.findIndex((faraaz) => {
+            return faraaz.arabicTokens.some((token) => {
+                if (!token.start || !token.end) {
+                    return false;
+                }
+
+                return token.start <= this.currentTime && this.currentTime <= token.end;
+            });
+        });
     }
 
     private findNearestFaraazIndex(): number {
