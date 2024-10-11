@@ -1,3 +1,4 @@
 <div class="audio-manager">
     <audio #audio [src]="src" controls muted preload="metadata" (timeupdate)="timeUpdateHandler()"></audio>
+    <button class="secondary back-to-top" (click)="backToTopButtonClickHandler()">بازگشت به ابتدای صفحه</button>
 </div>

@@ -15,4 +15,8 @@ export class AudioManagerComponent {
     public timeUpdateHandler(): void {
         this.currentTimeChange.emit(this.audioRef.nativeElement.currentTime);
     }
+
+    public backToTopButtonClickHandler(): void {
+        window.scrollTo({top: 0});
+    }
 }

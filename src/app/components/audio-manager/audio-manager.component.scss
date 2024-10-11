@@ -5,12 +5,17 @@
 
     background-color: var(--color--body-background);
 
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
     padding-block: 1rem;
     padding-inline: var(--full-width-padding-inline);
 
     audio {
-        display: block;
-
-        inline-size: 100%;
+        flex: 1 1 40rem;
     }
 }
