@@ -1,12 +1,12 @@
 name: Deploy
 on:
-    push:
-        branches: [master]
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-    deploy:
-        uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-angular.yml@master
-        with:
-            host: islam.bijanprogrammer.com
-            base-href: /
-            project-name: islam
+  deploy:
+    uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-nextjs.yml@master
+    with:
+      process-name: islam
+    secrets: inherit

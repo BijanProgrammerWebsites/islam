@@ -1,0 +1,33 @@
+.button {
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: 0.25rem;
+
+  transition: background-color var(--animation-normal);
+
+  &:not([disabled]) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-gray-90);
+      color: var(--color-gray-10);
+
+      transition: var(--animation-fast);
+    }
+
+    &.primary {
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
+
+      &:hover {
+        background-color: var(--color-primary-darker);
+      }
+    }
+  }
+
+  &[disabled] {
+    background-color: var(--color-gray-70);
+    color: var(--color-gray-40);
+  }
+}

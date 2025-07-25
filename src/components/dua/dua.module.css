@@ -1,0 +1,19 @@
+.dua {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-block-end: 10rem;
+
+  font-size: 1rem;
+
+  .faraaz {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &:last-of-type {
+      min-height: 100vh;
+    }
+  }
+}

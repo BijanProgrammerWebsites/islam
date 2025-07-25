@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light;
+
+  --color-gray-98: hsl(0, 0%, 98%);
+  --color-gray-90: hsl(0, 0%, 90%);
+  --color-gray-80: hsl(0, 0%, 80%);
+  --color-gray-70: hsl(0, 0%, 70%);
+  --color-gray-40: hsl(0, 0%, 40%);
+  --color-gray-30: hsl(0, 0%, 30%);
+  --color-gray-20: hsl(0, 0%, 20%);
+  --color-gray-10: hsl(0, 0%, 10%);
+
+  --color-primary: hsl(200deg, 50%, 40%);
+  --color-primary-fade: hsl(200deg, 100%, 90%);
+  --color-primary-lighter: hsl(200deg, 50%, 46%);
+  --color-primary-darker: hsl(200deg, 50%, 34%);
+  --color-primary-opposite: var(--color-gray-98);
+
+  --color-quran: hsl(160, 70%, 30%);
+
+  --color-body-background: var(--color-gray-98);
+  --color-body-foreground: var(--color-gray-10);
+
+  --color-border-fade: var(--color-gray-80);
+
+  --shadow-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-body-background: var(--color-gray-10);
+    --color-body-foreground: var(--color-gray-90);
+
+    --color-border-fade: var(--color-gray-30);
+  }
+}
