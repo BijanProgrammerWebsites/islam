@@ -3,6 +3,8 @@ import { PropsWithChildren, ReactNode } from "react";
 import type { Metadata } from "next";
 import { Amiri_Quran, Vazirmatn } from "next/font/google";
 
+import HeaderComponent from "@/components/header/header.component";
+
 import "@/styles/button.css";
 import "@/styles/colors.css";
 
@@ -34,7 +36,10 @@ export default function RootLayout({ children }: Props): ReactNode {
       dir="rtl"
       className={`${vazirmatn.variable} ${amiriQuran.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <HeaderComponent />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

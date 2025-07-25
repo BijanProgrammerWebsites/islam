@@ -9,6 +9,7 @@
     "^@/assets",
     "^@/components",
     "^@/context",
+    "^@/data",
     "^@/hooks",
     "^@/icons",
     "^@/logo",

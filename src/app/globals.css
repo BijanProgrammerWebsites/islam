@@ -1,3 +1,14 @@
+:root {
+  --full-width: 75rem;
+  --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
+
+  --shell--padding: 1rem;
+
+  --animation--duration--fast: 0.2s;
+  --animation--duration--normal: 0.5s;
+  --animation--duration--slow: 1s;
+}
+
 *,
 *::before,
 *::after {
@@ -9,7 +20,6 @@
 
 html {
   font-family: var(--font-vazirmatn);
-  font-size: 62.5%;
 
   scroll-behavior: smooth;
 }
@@ -42,15 +52,22 @@ body {
   background-color: var(--color--body-background);
   color: var(--color--body-foreground);
 
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
 
   padding-inline: var(--full-width-padding-inline);
 
-  font-size: 1.6rem;
-}
+  main {
+    flex: 1 1 0;
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap, 4rem);
+    padding-block: var(--shell--padding);
+
+    > * {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap, 4rem);
+    }
+  }
 }
