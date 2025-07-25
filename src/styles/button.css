@@ -4,7 +4,7 @@
   border: none;
   border-radius: 0.25rem;
 
-  transition: background-color var(--animation-duration-fast) ease-in-out;
+  transition: background-color var(--animation-normal);
 
   &:not([disabled]) {
     cursor: pointer;
@@ -12,6 +12,8 @@
     &:hover {
       background-color: var(--color-gray-90);
       color: var(--color-gray-10);
+
+      transition: var(--animation-fast);
     }
 
     &.primary {
@@ -24,11 +26,11 @@
     }
 
     &.secondary {
-      background-color: var(--color-secondary);
-      color: var(--color-secondary-opposite);
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
 
       &:hover {
-        background-color: var(--color-secondary-darker);
+        background-color: var(--color-primary-darker);
       }
     }
 

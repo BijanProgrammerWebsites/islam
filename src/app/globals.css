@@ -4,9 +4,8 @@
 
   --shell-padding: 1rem;
 
-  --animation-duration-fast: 0.2s;
-  --animation-duration-normal: 0.5s;
-  --animation-duration-slow: 1s;
+  --animation-fast: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-normal: 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *,
@@ -52,22 +51,11 @@ body {
   background-color: var(--color-body-background);
   color: var(--color-body-foreground);
 
-  display: flex;
-  flex-direction: column;
-
   min-height: 100vh;
 
   padding-inline: var(--full-width-padding-inline);
 
   main {
-    flex: 1 1 0;
-
     padding-block: var(--shell-padding);
-
-    > * {
-      display: flex;
-      flex-direction: column;
-      gap: var(--gap, 4rem);
-    }
   }
 }

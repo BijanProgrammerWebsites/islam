@@ -2,24 +2,26 @@
   .routes {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 
     li {
-      flex-grow: 1;
-
       a {
-        box-shadow: var(--box-shadow-subtle);
+        box-shadow: var(--shadow-400);
 
         display: block;
 
-        padding: 1rem;
+        padding: 0.5rem 1rem;
+
+        border-radius: 0.5rem;
 
         text-align: center;
 
-        transition: transform var(--animation-duration-fast);
+        transition: transform var(--animation-normal);
 
         &:hover {
           transform: translateY(-0.2rem);
+
+          transition: var(--animation-fast);
         }
       }
     }

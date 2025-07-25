@@ -6,21 +6,13 @@
 
   padding-block: var(--shell-padding);
 
-  border-bottom: 1px solid var(--color-separator);
+  border-bottom: 1px solid var(--color-border-fade);
 
   user-select: none;
 
   .logo {
-    background-color: var(--color-header-logo-background);
-    color: var(--color-header-logo-foreground);
-
     font-size: 1.5rem;
     font-weight: 700;
-
-    &:hover {
-      background-color: var(--color-header-logo-background-hover);
-      color: var(--color-header-logo-foreground-hover);
-    }
   }
 
   button.icon {
@@ -62,7 +54,7 @@
 
     &:hover {
       &::before {
-        background-color: var(--color-default-foreground);
+        background-color: var(--color-gray-10);
       }
     }
   }

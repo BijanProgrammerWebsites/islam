@@ -10,9 +10,9 @@ export default function Page(): ReactNode {
   return (
     <div className={styles.page}>
       <ul className={styles.routes}>
-        {duaData.map((route) => (
-          <li key={route.title}>
-            <Link href={route.path}>{route.title}</Link>
+        {Object.entries(duaData).map(([path, dua]) => (
+          <li key={dua.title}>
+            <Link href={path}>{dua.title}</Link>
           </li>
         ))}
       </ul>
