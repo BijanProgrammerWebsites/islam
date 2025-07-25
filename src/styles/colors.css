@@ -16,62 +16,62 @@
   --color-gray-20: hsl(0, 0%, 20%);
   --color-gray-10: hsl(0, 0%, 10%);
 
-  --color--default-background: var(--color-gray-98);
-  --color--default-foreground: var(--color-gray-10);
+  --color-default-background: var(--color-gray-98);
+  --color-default-foreground: var(--color-gray-10);
 
-  --color--primary: hsl(var(--primary-hue), 50%, 40%);
-  --color--primary-fade: hsl(var(--primary-hue), 100%, 90%);
-  --color--primary-lighter: hsl(var(--primary-hue), 50%, 46%);
-  --color--primary-darker: hsl(var(--primary-hue), 50%, 34%);
-  --color--primary-opposite: var(--color-gray-98);
+  --color-primary: hsl(var(--primary-hue), 50%, 40%);
+  --color-primary-fade: hsl(var(--primary-hue), 100%, 90%);
+  --color-primary-lighter: hsl(var(--primary-hue), 50%, 46%);
+  --color-primary-darker: hsl(var(--primary-hue), 50%, 34%);
+  --color-primary-opposite: var(--color-gray-98);
 
-  --color--secondary: hsl(var(--secondary-hue), 50%, 40%);
-  --color--secondary-fade: hsl(var(--secondary-hue), 100%, 90%);
-  --color--secondary-lighter: hsl(var(--secondary-hue), 50%, 46%);
-  --color--secondary-darker: hsl(var(--secondary-hue), 50%, 34%);
-  --color--secondary-opposite: var(--color-gray-98);
+  --color-secondary: hsl(var(--secondary-hue), 50%, 40%);
+  --color-secondary-fade: hsl(var(--secondary-hue), 100%, 90%);
+  --color-secondary-lighter: hsl(var(--secondary-hue), 50%, 46%);
+  --color-secondary-darker: hsl(var(--secondary-hue), 50%, 34%);
+  --color-secondary-opposite: var(--color-gray-98);
 
-  --color--warning: hsl(var(--warning-hue), 50%, 44%);
-  --color--warning-fade: hsl(var(--warning-hue), 100%, 90%);
-  --color--warning-lighter: hsl(var(--warning-hue), 50%, 50%);
-  --color--warning-darker: hsl(var(--warning-hue), 50%, 40%);
-  --color--warning-opposite: var(--color-gray-98);
+  --color-warning: hsl(var(--warning-hue), 50%, 44%);
+  --color-warning-fade: hsl(var(--warning-hue), 100%, 90%);
+  --color-warning-lighter: hsl(var(--warning-hue), 50%, 50%);
+  --color-warning-darker: hsl(var(--warning-hue), 50%, 40%);
+  --color-warning-opposite: var(--color-gray-98);
 
-  --color--success: hsl(var(--success-hue), 50%, 40%);
-  --color--success-fade: hsl(var(--success-hue), 100%, 92%);
-  --color--success-lighter: hsl(var(--success-hue), 50%, 44%);
-  --color--success-darker: hsl(var(--success-hue), 50%, 36%);
-  --color--success-opposite: var(--color-gray-98);
+  --color-success: hsl(var(--success-hue), 50%, 40%);
+  --color-success-fade: hsl(var(--success-hue), 100%, 92%);
+  --color-success-lighter: hsl(var(--success-hue), 50%, 44%);
+  --color-success-darker: hsl(var(--success-hue), 50%, 36%);
+  --color-success-opposite: var(--color-gray-98);
 
-  --color--danger: hsl(var(--danger-hue), 50%, 36%);
-  --color--danger-fade: hsl(var(--danger-hue), 100%, 90%);
-  --color--danger-lighter: hsl(var(--danger-hue), 50%, 42%);
-  --color--danger-darker: hsl(var(--danger-hue), 50%, 30%);
-  --color--danger-opposite: var(--color-gray-98);
+  --color-danger: hsl(var(--danger-hue), 50%, 36%);
+  --color-danger-fade: hsl(var(--danger-hue), 100%, 90%);
+  --color-danger-lighter: hsl(var(--danger-hue), 50%, 42%);
+  --color-danger-darker: hsl(var(--danger-hue), 50%, 30%);
+  --color-danger-opposite: var(--color-gray-98);
 
-  --color--quran: hsl(160, 70%, 30%);
+  --color-quran: hsl(160, 70%, 30%);
 
-  --color--body-background: var(--color--default-background);
-  --color--body-foreground: var(--color--default-foreground);
+  --color-body-background: var(--color-default-background);
+  --color-body-foreground: var(--color-default-foreground);
 
-  --color--border--fade: var(--color-gray-80);
-  --color--separator: var(--color--border--fade);
-  --color--input-border: var(--color--border--fade);
+  --color-border-fade: var(--color-gray-80);
+  --color-separator: var(--color-border-fade);
+  --color-input-border: var(--color-border-fade);
 
-  --color--button-disabled-background: var(--color-gray-70);
-  --color--button-disabled-foreground: var(--color--default-foreground);
+  --color-button-disabled-background: var(--color-gray-70);
+  --color-button-disabled-foreground: var(--color-default-foreground);
 
-  --color--box-shadow--subtle: hsla(0, 0%, 10%, 12%);
-  --box-shadow--subtle: 0 0.2rem 0.5rem 0 var(--color--box-shadow--subtle);
+  --color-box-shadow-subtle: hsla(0, 0%, 10%, 12%);
+  --box-shadow-subtle: 0 0.2rem 0.5rem 0 var(--color-box-shadow-subtle);
 
   &[data-theme="dark"] {
     color-scheme: dark;
 
-    --color--default-background: var(--color-gray-10);
-    --color--default-foreground: var(--color-gray-90);
+    --color-default-background: var(--color-gray-10);
+    --color-default-foreground: var(--color-gray-90);
 
-    --color--border--fade: var(--color-gray-30);
+    --color-border-fade: var(--color-gray-30);
 
-    --color--box-shadow--subtle: hsla(0, 0%, 0%, 50%);
+    --color-box-shadow-subtle: hsla(0, 0%, 0%, 50%);
   }
 }

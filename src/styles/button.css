@@ -4,7 +4,7 @@
   border: none;
   border-radius: 0.25rem;
 
-  transition: background-color var(--animation--duration--fast) ease-in-out;
+  transition: background-color var(--animation-duration-fast) ease-in-out;
 
   &:not([disabled]) {
     cursor: pointer;
@@ -15,53 +15,53 @@
     }
 
     &.primary {
-      background-color: var(--color--primary);
-      color: var(--color--primary-opposite);
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
 
       &:hover {
-        background-color: var(--color--primary-darker);
+        background-color: var(--color-primary-darker);
       }
     }
 
     &.secondary {
-      background-color: var(--color--secondary);
-      color: var(--color--secondary-opposite);
+      background-color: var(--color-secondary);
+      color: var(--color-secondary-opposite);
 
       &:hover {
-        background-color: var(--color--secondary-darker);
+        background-color: var(--color-secondary-darker);
       }
     }
 
     &.success {
-      background-color: var(--color--success);
-      color: var(--color--success-opposite);
+      background-color: var(--color-success);
+      color: var(--color-success-opposite);
 
       &:hover {
-        background-color: var(--color--success-darker);
+        background-color: var(--color-success-darker);
       }
     }
 
     &.warning {
-      background-color: var(--color--warning);
-      color: var(--color--warning-opposite);
+      background-color: var(--color-warning);
+      color: var(--color-warning-opposite);
 
       &:hover {
-        background-color: var(--color--warning-darker);
+        background-color: var(--color-warning-darker);
       }
     }
 
     &.danger {
-      background-color: var(--color--danger);
-      color: var(--color--danger-opposite);
+      background-color: var(--color-danger);
+      color: var(--color-danger-opposite);
 
       &:hover {
-        background-color: var(--color--danger-darker);
+        background-color: var(--color-danger-darker);
       }
     }
   }
 
   &[disabled] {
-    background-color: var(--color--button-disabled-background) !important;
-    color: var(--color--button-disabled-foreground) !important;
+    background-color: var(--color-button-disabled-background) !important;
+    color: var(--color-button-disabled-foreground) !important;
   }
 }

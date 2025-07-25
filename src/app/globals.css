@@ -2,11 +2,11 @@
   --full-width: 75rem;
   --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
 
-  --shell--padding: 1rem;
+  --shell-padding: 1rem;
 
-  --animation--duration--fast: 0.2s;
-  --animation--duration--normal: 0.5s;
-  --animation--duration--slow: 1s;
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.5s;
+  --animation-duration-slow: 1s;
 }
 
 *,
@@ -49,8 +49,8 @@ a {
 }
 
 body {
-  background-color: var(--color--body-background);
-  color: var(--color--body-foreground);
+  background-color: var(--color-body-background);
+  color: var(--color-body-foreground);
 
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ body {
   main {
     flex: 1 1 0;
 
-    padding-block: var(--shell--padding);
+    padding-block: var(--shell-padding);
 
     > * {
       display: flex;

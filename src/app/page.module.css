@@ -8,7 +8,7 @@
       flex-grow: 1;
 
       a {
-        box-shadow: var(--box-shadow--subtle);
+        box-shadow: var(--box-shadow-subtle);
 
         display: block;
 
@@ -16,7 +16,7 @@
 
         text-align: center;
 
-        transition: transform var(--animation--duration--fast);
+        transition: transform var(--animation-duration-fast);
 
         &:hover {
           transform: translateY(-0.2rem);
