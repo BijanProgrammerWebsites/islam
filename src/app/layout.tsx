@@ -5,6 +5,8 @@ import { Amiri_Quran, Vazirmatn } from "next/font/google";
 
 import HeaderComponent from "@/components/header/header.component";
 
+import ThemeProvider from "@/providers/theme.provider";
+
 import "@/styles/button.css";
 import "@/styles/colors.css";
 
@@ -37,8 +39,10 @@ export default function RootLayout({ children }: Props): ReactNode {
       className={`${vazirmatn.variable} ${amiriQuran.variable}`}
     >
       <body>
-        <HeaderComponent />
-        <main>{children}</main>
+        <ThemeProvider>
+          <HeaderComponent />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

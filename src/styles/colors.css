@@ -54,30 +54,6 @@
   --color--body-background: var(--color--default-background);
   --color--body-foreground: var(--color--default-foreground);
 
-  --color--overlay-background: hsla(0, 0%, 0%, 0.94);
-  --color--overlay-foreground: var(--color--default-background);
-
-  --color--header-logo-background: transparent;
-  --color--header-logo-foreground: inherit;
-  --color--header-logo-background--hover: transparent;
-  --color--header-logo-foreground--hover: hsl(var(--primary-hue), 100%, 60%);
-
-  --color--nav-link-background: transparent;
-  --color--nav-link-foreground: inherit;
-  --color--nav-link-background--hover: hsl(var(--primary-hue), 0%, 94%);
-  --color--nav-link-foreground--hover: var(--color--header-nav-foreground);
-  --color--nav-link-background--active: var(--color--header-nav-background);
-  --color--nav-link-foreground--active: var(--color--primary);
-  --color--nav-link-background--active-hover: hsl(var(--primary-hue), 50%, 94%);
-  --color--nav-link-foreground--active-hover: var(
-    --color--header-nav-foreground--active
-  );
-
-  --color--footer-background: hsl(var(--primary-hue), 18%, 16%);
-  --color--footer-foreground: var(--color--default-background);
-
-  --color--placeholder: var(--color-gray-40);
-
   --color--border--fade: var(--color-gray-80);
   --color--separator: var(--color--border--fade);
   --color--input-border: var(--color--border--fade);
@@ -85,13 +61,10 @@
   --color--button-disabled-background: var(--color-gray-70);
   --color--button-disabled-foreground: var(--color--default-foreground);
 
-  --color--popper-background: var(--color-gray-20);
-  --color--popper-foreground: var(--color--default-background);
-
   --color--box-shadow--subtle: hsla(0, 0%, 10%, 12%);
   --box-shadow--subtle: 0 0.2rem 0.5rem 0 var(--color--box-shadow--subtle);
 
-  &.theme--dark {
+  &[data-theme="dark"] {
     color-scheme: dark;
 
     --color--default-background: var(--color-gray-10);
