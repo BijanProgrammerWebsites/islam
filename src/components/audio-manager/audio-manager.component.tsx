@@ -32,7 +32,7 @@ export default function AudioManagerComponent({
         onTimeUpdate={timeUpdateHandler}
       />
       <button
-        className="secondary back-to-top"
+        className="button secondary back-to-top"
         onClick={backToTopButtonClickHandler}
       >
         بازگشت به ابتدای صفحه
