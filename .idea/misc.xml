@@ -4,13 +4,4 @@
     <bower-package value="" />
     <bower.json value="" />
   </component>
-  <component name="PrettierConfiguration">
-    <option name="myConfigurationMode" value="AUTOMATIC" />
-    <option name="myRunOnSave" value="true" />
-    <option name="myFilesPattern" value="**/*" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-  </component>
 </project>
