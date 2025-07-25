@@ -18,7 +18,8 @@
 }
 
 html {
-  font-family: var(--font-vazirmatn);
+  /*noinspection CssUnresolvedCustomProperty*/
+  font-family: var(--font-vazirmatn), sans-serif;
 
   scroll-behavior: smooth;
 }
