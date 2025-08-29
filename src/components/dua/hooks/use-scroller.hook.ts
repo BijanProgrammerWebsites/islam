@@ -91,11 +91,19 @@ export default function useScroller(
 
   useEffect(() => {
     const pageUpKeyHandler = (e: KeyboardEvent): void => {
+      if (e.code !== "PageUp") {
+        return;
+      }
+
       e.preventDefault();
       goToPreviousFaraaz();
     };
 
     const pageDownKeyHandler = (e: KeyboardEvent): void => {
+      if (e.code !== "PageDown") {
+        return;
+      }
+
       e.preventDefault();
       goToNextFaraaz();
     };
