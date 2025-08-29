@@ -1,7 +1,8 @@
 import { PropsWithChildren, ReactNode } from "react";
 
 import type { Metadata } from "next";
-import { Amiri_Quran, Vazirmatn } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
+import localFont from "next/font/local";
 
 import HeaderComponent from "@/components/header/header.component";
 
@@ -19,10 +20,9 @@ const vazirmatn = Vazirmatn({
   weight: ["400", "700"],
 });
 
-const amiriQuran = Amiri_Quran({
+const amiriQuran = localFont({
+  src: "../assets/fonts/AmiriQuranColored.ttf",
   variable: "--font-amiri-quran",
-  subsets: ["arabic"],
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {

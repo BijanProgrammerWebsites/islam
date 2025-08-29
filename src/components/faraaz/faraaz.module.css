@@ -29,7 +29,8 @@
   }
 
   &.arabic {
-    font-family: "Amiri Quran", serif;
+    /*noinspection CssUnresolvedCustomProperty*/
+    font-family: var(--font-amiri-quran), sans-serif;
     font-size: 1.5em;
   }
 
