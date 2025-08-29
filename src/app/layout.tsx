@@ -9,6 +9,7 @@ import ThemeProvider from "@/providers/theme.provider";
 
 import "@/styles/button.css";
 import "@/styles/colors.css";
+import "@/styles/shadows.css";
 
 import "./globals.css";
 
