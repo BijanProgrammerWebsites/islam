@@ -18,19 +18,6 @@ export default function useScroller(
     return [...(nodes ?? [])];
   }, [parent]);
 
-  const goToPlayingFaraaz = (): void => {
-    const faraazes = findFaraazes();
-
-    const index = findPlayingFaraazIndex();
-    const faraaz = faraazes[index];
-
-    if (!faraaz) {
-      return;
-    }
-
-    window.scrollTo({ top: faraaz.offsetTop });
-  };
-
   const findNearestFaraazIndex = useCallback((): number => {
     const faraazes = findFaraazes();
 
@@ -77,7 +64,7 @@ export default function useScroller(
     }
   }, [findFaraazes, findNearestFaraazIndex]);
 
-  const findPlayingFaraazIndex = (): number => {
+  const findPlayingFaraazIndex = useCallback((): number => {
     return dua.faraazes.findIndex((faraaz) => {
       return faraaz.arabicTokens.some((token) => {
         if (!token.start || !token.end) {
@@ -87,7 +74,20 @@ export default function useScroller(
         return token.start <= currentTime && currentTime <= token.end;
       });
     });
-  };
+  }, [currentTime, dua.faraazes]);
+
+  const goToPlayingFaraaz = useCallback((): void => {
+    const faraazes = findFaraazes();
+
+    const index = findPlayingFaraazIndex();
+    const faraaz = faraazes[index];
+
+    if (!faraaz) {
+      return;
+    }
+
+    window.scrollTo({ top: faraaz.offsetTop });
+  }, [findFaraazes, findPlayingFaraazIndex]);
 
   useEffect(() => {
     const pageUpKeyHandler = (e: KeyboardEvent): void => {
