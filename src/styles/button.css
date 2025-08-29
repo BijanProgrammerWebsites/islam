@@ -1,4 +1,6 @@
 .button {
+  background-color: var(--color-surface-action);
+
   padding: 0.5rem 1rem;
 
   border: none;
@@ -6,28 +8,20 @@
 
   transition: background-color var(--animation-normal);
 
-  &:not([disabled]) {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-      background-color: var(--color-gray-90);
-      color: var(--color-gray-10);
+  &:hover {
+    background-color: var(--color-surface-action-hover);
 
-      transition: var(--animation-fast);
-    }
-
-    &.primary {
-      background-color: var(--color-primary);
-      color: var(--color-primary-opposite);
-
-      &:hover {
-        background-color: var(--color-primary-darker);
-      }
-    }
+    transition: var(--animation-fast);
   }
 
-  &[disabled] {
-    background-color: var(--color-gray-70);
-    color: var(--color-gray-40);
+  &.primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
   }
 }

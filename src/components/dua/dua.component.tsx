@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useState } from "react";
 
 import AudioManagerComponent from "@/components/audio-manager/audio-manager.component";
 import useScroller from "@/components/dua/hooks/use-scroller.hook";
@@ -20,9 +20,7 @@ type Props = {
 export default function DuaComponent({ title, dua }: Props): ReactNode {
   const [currentTime, setCurrentTime] = useState<number>(0);
 
-  const duaRef = useRef<HTMLDivElement>(null);
-
-  const { goToPlayingFaraaz } = useScroller(dua, currentTime, duaRef.current);
+  const { goToPlayingFaraaz } = useScroller(dua, currentTime);
 
   const currentTimeChangeHandler = (currentTime: number): void => {
     setCurrentTime(currentTime);
@@ -37,9 +35,9 @@ export default function DuaComponent({ title, dua }: Props): ReactNode {
           src={dua.audioSource}
           onCurrentTimeChange={currentTimeChangeHandler}
         />
-        <div ref={duaRef} className={styles.dua}>
+        <div className={styles.dua}>
           {dua.faraazes.map((faraaz, faraazIndex) => (
-            <div key={faraazIndex} className={styles.faraaz}>
+            <div key={faraazIndex} className={styles.faraaz} data-faraaz>
               {(["arabic", "persian"] as const).map((language) => (
                 <FaraazComponent
                   key={language}

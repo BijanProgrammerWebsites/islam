@@ -1,7 +1,8 @@
 import { PropsWithChildren, ReactNode } from "react";
 
 import type { Metadata } from "next";
-import { Amiri_Quran, Vazirmatn } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
+import localFont from "next/font/local";
 
 import HeaderComponent from "@/components/header/header.component";
 
@@ -9,6 +10,7 @@ import ThemeProvider from "@/providers/theme.provider";
 
 import "@/styles/button.css";
 import "@/styles/colors.css";
+import "@/styles/shadows.css";
 
 import "./globals.css";
 
@@ -18,10 +20,9 @@ const vazirmatn = Vazirmatn({
   weight: ["400", "700"],
 });
 
-const amiriQuran = Amiri_Quran({
+const amiriQuran = localFont({
+  src: "../assets/fonts/AmiriQuranColored.ttf",
   variable: "--font-amiri-quran",
-  subsets: ["arabic"],
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Props): ReactNode {
       lang="fa"
       dir="rtl"
       className={`${vazirmatn.variable} ${amiriQuran.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body>
         <ThemeProvider>

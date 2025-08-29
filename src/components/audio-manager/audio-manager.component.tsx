@@ -25,7 +25,7 @@ export default function AudioManagerComponent({
     <div className={styles["audio-manager"]}>
       <audio
         ref={audioRef}
-        src={src}
+        src={src || undefined}
         controls
         muted
         preload="metadata"

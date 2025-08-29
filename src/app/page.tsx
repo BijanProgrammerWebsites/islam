@@ -12,7 +12,9 @@ export default function Page(): ReactNode {
       <ul className={styles.routes}>
         {Object.entries(duaData).map(([path, dua]) => (
           <li key={dua.title}>
-            <Link href={path}>{dua.title}</Link>
+            <Link className="button" href={path}>
+              {dua.title}
+            </Link>
           </li>
         ))}
       </ul>

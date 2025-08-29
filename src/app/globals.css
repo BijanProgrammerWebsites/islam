@@ -49,8 +49,8 @@ a {
 }
 
 body {
-  background-color: var(--color-body-background);
-  color: var(--color-body-foreground);
+  background-color: var(--color-surface-1);
+  color: var(--color-text);
 
   min-height: 100vh;
 

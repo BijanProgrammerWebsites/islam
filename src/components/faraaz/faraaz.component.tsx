@@ -47,7 +47,7 @@ export default function FaraazComponent({
           onMouseLeave={() => tokenMouseLeaveHandler()}
         >
           {token.text}
-          {` `}
+          {!token.isFromQuran && ` `}
         </span>
       ))}
     </div>
