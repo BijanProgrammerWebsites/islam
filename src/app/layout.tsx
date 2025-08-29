@@ -38,6 +38,7 @@ export default function RootLayout({ children }: Props): ReactNode {
       lang="fa"
       dir="rtl"
       className={`${vazirmatn.variable} ${amiriQuran.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body>
         <ThemeProvider>

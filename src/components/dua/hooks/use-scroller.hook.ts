@@ -1,6 +1,4 @@
-import { useCallback, useEffect } from "react";
-
-import styles from "@/components/dua/dua.module.css";
+import { RefObject, useCallback, useEffect } from "react";
 
 import { Dua } from "@/types/dua.type";
 
@@ -11,12 +9,11 @@ type Result = {
 export default function useScroller(
   dua: Dua,
   currentTime: number,
-  parent: HTMLElement | null,
+  faraazRefs: RefObject<(HTMLDivElement | null)[]>,
 ): Result {
   const findFaraazes = useCallback(() => {
-    const nodes = parent?.querySelectorAll<HTMLDivElement>(styles.faraaz);
-    return [...(nodes ?? [])];
-  }, [parent]);
+    return faraazRefs.current.filter((faraaz) => !!faraaz);
+  }, [faraazRefs]);
 
   const findNearestFaraazIndex = useCallback((): number => {
     const faraazes = findFaraazes();
