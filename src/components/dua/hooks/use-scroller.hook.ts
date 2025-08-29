@@ -57,11 +57,11 @@ export default function useScroller(dua: Dua, currentTime: number): Result {
       goToNextFaraaz();
     };
 
-    document.addEventListener("keyup", pageUpKeyHandler);
+    document.addEventListener("keydown", pageUpKeyHandler);
     document.addEventListener("keydown", pageDownKeyHandler);
 
     return () => {
-      document.removeEventListener("keyup", pageUpKeyHandler);
+      document.removeEventListener("keydown", pageUpKeyHandler);
       document.removeEventListener("keydown", pageDownKeyHandler);
     };
   }, []);
