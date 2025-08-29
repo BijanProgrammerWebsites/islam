@@ -1,36 +1,70 @@
 :root {
   color-scheme: light;
 
-  --color-gray-98: hsl(0, 0%, 98%);
-  --color-gray-90: hsl(0, 0%, 90%);
-  --color-gray-80: hsl(0, 0%, 80%);
-  --color-gray-70: hsl(0, 0%, 70%);
-  --color-gray-40: hsl(0, 0%, 40%);
-  --color-gray-30: hsl(0, 0%, 30%);
-  --color-gray-20: hsl(0, 0%, 20%);
-  --color-gray-10: hsl(0, 0%, 10%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
 
-  --color-primary: hsl(200deg, 50%, 40%);
-  --color-primary-fade: hsl(200deg, 100%, 90%);
-  --color-primary-lighter: hsl(200deg, 50%, 46%);
-  --color-primary-darker: hsl(200deg, 50%, 34%);
-  --color-primary-opposite: var(--color-gray-98);
+  --color-gray-0: hsl(210, 17%, 98%);
+  --color-gray-1: hsl(210, 17%, 95%);
+  --color-gray-2: hsl(210, 15%, 93%);
+  --color-gray-3: hsl(210, 14%, 90%);
+  --color-gray-4: hsl(210, 12%, 84%);
+  --color-gray-5: hsl(210, 9%, 76%);
+  --color-gray-6: hsl(210, 7%, 62%);
+  --color-gray-7: hsl(210, 8%, 32%);
+  --color-gray-8: hsl(210, 7%, 23%);
+  --color-gray-9: hsl(210, 9%, 14%);
 
-  --color-quran: hsl(160, 70%, 30%);
+  --color-blue-0: hsl(210, 100%, 96%);
+  --color-blue-1: hsl(210, 100%, 93%);
+  --color-blue-2: hsl(210, 100%, 86%);
+  --color-blue-3: hsl(209, 97%, 85%);
+  --color-blue-4: hsl(209, 92%, 79%);
+  --color-blue-5: hsl(209, 81%, 70%);
+  --color-blue-6: hsl(209, 71%, 65%);
+  --color-blue-7: hsl(209, 65%, 60%);
+  --color-blue-8: hsl(209, 60%, 53%);
+  --color-blue-9: hsl(209, 56%, 45%);
 
-  --color-body-background: var(--color-gray-98);
-  --color-body-foreground: var(--color-gray-10);
+  --color-green-0: hsl(128, 64%, 96%);
+  --color-green-1: hsl(128, 62%, 91%);
+  --color-green-2: hsl(129, 62%, 83%);
+  --color-green-3: hsl(129, 60%, 73%);
+  --color-green-4: hsl(130, 58%, 64%);
+  --color-green-5: hsl(131, 58%, 56%);
+  --color-green-6: hsl(132, 53%, 50%);
+  --color-green-7: hsl(133, 53%, 45%);
+  --color-green-8: hsl(134, 53%, 41%);
+  --color-green-9: hsl(135, 52%, 36%);
 
-  --color-border-fade: var(--color-gray-80);
+  --color-surface-1: var(--color-gray-1);
+  --color-surface-2: var(--color-white);
+  --color-surface-action: var(--color-gray-3);
+  --color-surface-action-hover: var(--color-gray-4);
+
+  --color-text: var(--color-gray-9);
+
+  --color-primary-light: var(--color-blue-6);
+  --color-primary: var(--color-blue-8);
+  --color-primary-dark: var(--color-blue-9);
+  --color-primary-contrast: var(--color-white);
+
+  --color-quran: var(--color-green-9);
+
+  --color-border-fade: var(--color-gray-4);
 
   --shadow-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
   &[data-theme="dark"] {
     color-scheme: dark;
 
-    --color-body-background: var(--color-gray-10);
-    --color-body-foreground: var(--color-gray-90);
+    --color-surface-1: var(--color-gray-9);
+    --color-surface-2: var(--color-gray-8);
+    --color-surface-action: var(--color-gray-8);
+    --color-surface-action-hover: var(--color-gray-7);
 
-    --color-border-fade: var(--color-gray-30);
+    --color-text: var(--color-gray-1);
+
+    --color-border-fade: var(--color-gray-7);
   }
 }
