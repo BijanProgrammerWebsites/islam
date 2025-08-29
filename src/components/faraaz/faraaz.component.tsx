@@ -34,7 +34,7 @@ export default function FaraazComponent({
   return (
     <div className={clsx(styles.faraaz, styles[language])}>
       {tokens.map((token, tokenIndex) => (
-        <div
+        <span
           key={tokenIndex}
           className={clsx(styles.token, {
             [styles.quran]: token.isFromQuran,
@@ -47,7 +47,8 @@ export default function FaraazComponent({
           onMouseLeave={() => tokenMouseLeaveHandler()}
         >
           {token.text}
-        </div>
+          {` `}
+        </span>
       ))}
     </div>
   );
