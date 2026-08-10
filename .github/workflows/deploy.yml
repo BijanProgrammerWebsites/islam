@@ -1,4 +1,5 @@
 name: Deploy
+
 on:
   push:
     branches: [main]
@@ -8,6 +9,8 @@ jobs:
   deploy:
     uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-nextjs.yml@master
     with:
-      process-name: islam
+      domain: islam.bijanprogrammer.com
+      base-href: /
+      process-name: islam.bijanprogrammer.com
       port: 3014
     secrets: inherit
