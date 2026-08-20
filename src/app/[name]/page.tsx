@@ -61,3 +61,7 @@ async function loadDua(jsonFilename: string): Promise<Dua | null> {
 
   return dua;
 }
+
+export async function generateStaticParams() {
+  return Object.keys(duaData).map((path) => ({ name: path }));
+}
